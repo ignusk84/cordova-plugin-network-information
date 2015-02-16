@@ -263,10 +263,10 @@ public class NetworkManager extends CordovaPlugin {
                     return TYPE_4G;
                 }
             }
-            */
+            
         }
         else {
-            return TYPE_NONE;
+            return TYPE_NONE;*/
         }
         return TYPE_UNKNOWN;
     }
