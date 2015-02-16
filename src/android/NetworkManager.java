@@ -237,7 +237,7 @@ public class NetworkManager extends CordovaPlugin {
             String type = info.getTypeName();
 
             return "hvar";
-
+            /*
             if (type.toLowerCase().equals(WIFI)) {
                 return TYPE_WIFI;
             }
@@ -263,6 +263,7 @@ public class NetworkManager extends CordovaPlugin {
                     return TYPE_4G;
                 }
             }
+            */
         }
         else {
             return TYPE_NONE;
