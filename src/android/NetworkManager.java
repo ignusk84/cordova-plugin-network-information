@@ -124,7 +124,7 @@ public class NetworkManager extends CordovaPlugin {
             NetworkInfo info = sockMan.getActiveNetworkInfo();
             String connectionType = "";
             try {
-                connectionType = this.getConnectionInfo(info).get("type").toString();
+                connectionType = "foo"; //this.getConnectionInfo(info).get("type").toString();
             } catch (JSONException e) { }
 
             PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, connectionType);
@@ -168,7 +168,7 @@ public class NetworkManager extends CordovaPlugin {
         {
             String connectionType = "";
             try {
-                connectionType = thisInfo.get("type").toString();
+                connectionType = "bar"; //thisInfo.get("type").toString();
             } catch (JSONException e) { }
 
             sendUpdate(connectionType);
@@ -193,6 +193,9 @@ public class NetworkManager extends CordovaPlugin {
             else {
                 type = getType(info);
             }
+
+            type = "jar";
+
             extraInfo = info.getExtraInfo();
         }
 
@@ -232,6 +235,8 @@ public class NetworkManager extends CordovaPlugin {
     private String getType(NetworkInfo info) {
         if (info != null) {
             String type = info.getTypeName();
+
+            return "hvar";
 
             if (type.toLowerCase().equals(WIFI)) {
                 return TYPE_WIFI;
