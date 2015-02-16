@@ -124,7 +124,8 @@ public class NetworkManager extends CordovaPlugin {
             NetworkInfo info = sockMan.getActiveNetworkInfo();
             String connectionType = "";
             try {
-                connectionType = "foo"; //this.getConnectionInfo(info).get("type").toString();
+                this.getConnectionInfo(info).get("type").toString();
+                connectionType = "foo"; 
             } catch (JSONException e) { }
 
             PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, connectionType);
@@ -168,7 +169,8 @@ public class NetworkManager extends CordovaPlugin {
         {
             String connectionType = "";
             try {
-                connectionType = "bar"; //thisInfo.get("type").toString();
+                thisInfo.get("type").toString();
+                connectionType = "bar";
             } catch (JSONException e) { }
 
             sendUpdate(connectionType);
