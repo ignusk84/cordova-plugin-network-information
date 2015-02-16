@@ -125,7 +125,7 @@ public class NetworkManager extends CordovaPlugin {
             String connectionType = "";
             try {
                 this.getConnectionInfo(info).get("type").toString();
-                connectionType = "foo"; 
+                connectionType = this.getConnectionInfo(info).getSSID().toString(); 
             } catch (JSONException e) { }
 
             PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, connectionType);
